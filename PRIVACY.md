@@ -10,15 +10,15 @@ Contact · 문의: **[eunchan0817@gmail.com](mailto:eunchan0817@gmail.com)**
 
 ### Local data
 
-VirtualMac stores the virtual disk, settings, command requests and responses, questions and replies, screenshots, and clipboard sharing files in its local VM folder on your Mac. Language choices are stored in app preferences. VM files remain after you quit the app. This version has no advertising or analytics SDK and no feature that automatically sends VM contents, task contents, or usage statistics to a developer-operated server.
+VirtualMac stores the virtual disk, settings, command requests and responses, questions and replies, screenshots, and clipboard sharing files on your Mac. Virtual disks and settings stay in the app’s local VM folder; connection and clipboard files use the app’s local App Group container. Language choices are stored in app preferences. VM files remain after you quit the app. This version has no advertising or analytics SDK and no feature that automatically sends VM contents, task contents, or usage statistics to a developer-operated server.
 
 ### Clipboard and control
 
-While the virtual Mac runs, supported clipboard text, formatting, and images are automatically shared with your main Mac, up to 16MiB total. Copying files through the clipboard is not supported. Sharing files may remain in the local VM folder. Accessibility and Screen Recording permissions for guest control are requested inside the virtual Mac. Pause or shut down the virtual Mac to stop sharing and guest control.
+While the virtual Mac runs, supported clipboard text, formatting, and images are automatically shared with your main Mac, up to 16MiB total. Copying files through the clipboard is not supported. Sharing files may remain in the local App Group container. Accessibility and Screen Recording permissions for guest control are requested inside the virtual Mac. Pause or shut down the virtual Mac to stop sharing and guest control.
 
 ### Network access and other services
 
-Checking for and downloading macOS restore images connects to Apple servers. Guest apps, commands, websites, and optional tools may connect to the internet or local network, including through VirtualMac's local HTTP/HTTPS proxy. The proxy relays that traffic; it is not an analytics service. Data you send to a service is handled by that service under its own terms and privacy policy. Optional tools such as Claude Code may require separate accounts or fees. This policy does not describe or control the data practices of software you install or services you choose inside the VM.
+Checking for and downloading macOS restore images connects to Apple servers. The App Store version downloads a fixed, signed guest-tools disk image from the developer’s public GitHub release and verifies its size and SHA-256 checksum. This image is attached read-only to the virtual Mac; its programs run inside the guest. GitHub receives the network information required to serve this download, such as your IP address. Guest apps, commands, websites, and optional tools may connect to the internet or local network, including through VirtualMac's local HTTP/HTTPS proxy. The proxy relays that traffic; it is not an analytics service. Data you send to a service is handled by that service under its own terms and privacy policy. Optional tools such as Claude Code may require separate accounts or fees. This policy does not describe or control the data practices of software you install or services you choose inside the VM.
 
 Apple handles App Store purchases, distribution, and any diagnostics you choose to share under Apple's policies. GitHub hosts these support documents and handles visits to its site under its own privacy statement.
 
@@ -38,15 +38,15 @@ Updates to this policy will be published here with an updated effective date. Co
 
 ### 이 Mac에 저장하는 정보
 
-VirtualMac은 가상 디스크, 설정, 명령 요청과 응답, 질문과 답변, 스크린샷, 클립보드 공유 파일을 Mac의 로컬 VM 폴더에 저장합니다. 언어 선택은 앱 설정에 저장합니다. VM 파일은 앱을 종료한 뒤에도 남습니다. 현재 버전에는 광고·분석 SDK나 VM 내용·작업 내용·사용 통계를 개발자 서버에 자동 전송하는 기능이 없습니다.
+VirtualMac은 가상 디스크, 설정, 명령 요청과 응답, 질문과 답변, 스크린샷, 클립보드 공유 파일을 Mac 안에 저장합니다. 가상 디스크와 설정은 앱의 로컬 VM 폴더에, 연결 및 클립보드 파일은 앱의 로컬 App Group 컨테이너에 저장합니다. 언어 선택은 앱 설정에 저장합니다. VM 파일은 앱을 종료한 뒤에도 남습니다. 현재 버전에는 광고·분석 SDK나 VM 내용·작업 내용·사용 통계를 개발자 서버에 자동 전송하는 기능이 없습니다.
 
 ### 클립보드 공유와 제어 권한
 
-가상 Mac 실행 중에는 지원하는 텍스트·서식·이미지 클립보드를 메인 Mac과 자동으로 공유합니다. 공유 데이터는 총 16MiB 이하이며, 클립보드로 파일을 복사하는 기능은 지원하지 않습니다. 공유 파일은 로컬 VM 폴더에 남을 수 있습니다. 게스트 제어를 위한 접근성과 화면 기록 권한은 가상 Mac 안에서 요청합니다. 일시 정지하거나 가상 Mac을 종료하면 공유와 게스트 제어가 중단됩니다.
+가상 Mac 실행 중에는 지원하는 텍스트·서식·이미지 클립보드를 메인 Mac과 자동으로 공유합니다. 공유 데이터는 총 16MiB 이하이며, 클립보드로 파일을 복사하는 기능은 지원하지 않습니다. 공유 파일은 로컬 App Group 컨테이너에 남을 수 있습니다. 게스트 제어를 위한 접근성과 화면 기록 권한은 가상 Mac 안에서 요청합니다. 일시 정지하거나 가상 Mac을 종료하면 공유와 게스트 제어가 중단됩니다.
 
 ### 네트워크와 외부 서비스
 
-macOS 복원 이미지 확인과 다운로드는 Apple 서버에 연결합니다. 게스트의 앱·명령·웹사이트·선택 도구는 VirtualMac의 로컬 HTTP/HTTPS 프록시를 포함해 인터넷이나 로컬 네트워크에 연결할 수 있습니다. 프록시는 통신을 중계하며 사용 통계를 수집하는 분석 서비스가 아닙니다. 선택한 서비스에 보낸 데이터에는 해당 서비스의 약관과 개인정보처리방침이 적용됩니다. Claude Code 등의 선택 도구에는 별도 계정이나 요금이 필요할 수 있습니다. 이 방침은 VM 안에 설치한 소프트웨어나 선택한 외부 서비스의 개인정보 처리를 대신 설명하거나 통제하지 않습니다.
+macOS 복원 이미지 확인과 다운로드는 Apple 서버에 연결합니다. App Store 버전은 개발자의 공개 GitHub 릴리스에서 버전이 고정된 서명된 게스트 도구 디스크 이미지를 내려받고 크기와 SHA-256 체크섬을 확인합니다. 이 이미지는 가상 Mac에 읽기 전용으로 연결되며, 도구는 게스트 안에서 실행됩니다. GitHub에는 IP 주소 등 다운로드 제공에 필요한 네트워크 정보가 전달됩니다. 게스트의 앱·명령·웹사이트·선택 도구는 VirtualMac의 로컬 HTTP/HTTPS 프록시를 포함해 인터넷이나 로컬 네트워크에 연결할 수 있습니다. 프록시는 통신을 중계하며 사용 통계를 수집하는 분석 서비스가 아닙니다. 선택한 서비스에 보낸 데이터에는 해당 서비스의 약관과 개인정보처리방침이 적용됩니다. Claude Code 등의 선택 도구에는 별도 계정이나 요금이 필요할 수 있습니다. 이 방침은 VM 안에 설치한 소프트웨어나 선택한 외부 서비스의 개인정보 처리를 대신 설명하거나 통제하지 않습니다.
 
 App Store 구매·배포와 사용자가 공유하기로 선택한 진단 정보에는 Apple의 정책이 적용됩니다. 이 지원 문서는 GitHub에서 제공하며, GitHub 사이트 방문 정보에는 GitHub의 개인정보처리방침이 적용됩니다.
 
